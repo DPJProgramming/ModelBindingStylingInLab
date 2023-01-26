@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ModelBindingStyling_Lab.Models;
+using System;
 using System.Diagnostics;
+using System.Reflection;
+using System.Security.Claims;
 
 namespace ModelBindingStyling_Lab.Controllers
 {
@@ -39,33 +42,37 @@ namespace ModelBindingStyling_Lab.Controllers
         {
             return new List<ThreeDPrinters>()
             {
-                new ThreeDPrinters 
+                new ThreeDPrinters
                 {
                     BuildVolume = "180 x 180 x 180 mm",
                     Price = 499.99,
                     SKU = "SMLPRINTER7",
-                    Title = "The mini printer"
+                    Title = "The mini printer",
+                    PrinterImage = "src=/img/printer1.jpg" 
                 },
-                new ThreeDPrinters 
+                new ThreeDPrinters
                 {
                     BuildVolume = "300 x 300 x 300 mm",
                     Price = 899.99,
                     SKU = "MEDPRINTER12",
-                    Title = "Mega Printer"
+                    Title = "Mega Printer",
+                    PrinterImage = "src=/img/printer2.jpg"
                 },
                 new ThreeDPrinters 
                 {
                     BuildVolume = "360 x 360 x 360 mm",
                     Price = 999.99,
                     SKU = "MEDPRINTER12P",
-                    Title = "Mega Printer Plus"
+                    Title = "Mega Printer Plus",
+                    PrinterImage = "src=/img/printer3.jpg"
                 },
                 new ThreeDPrinters 
                 {
                     BuildVolume = "360 x 360 x 500 mm",
                     Price = 899.99,
                     SKU = "GIGANTOR10",
-                    Title = "Mega Printer"
+                    Title = "Mega Printer",
+                    PrinterImage = "src=/img/printer4.jpg"
                 }
             };
         }
@@ -78,14 +85,14 @@ namespace ModelBindingStyling_Lab.Controllers
         {
             return new UserProfile()
             {
-                DateOfBirth = new DateOnly(1815, 7, 1),
-                Email = "First.Programmer@gmail.com",
-                FullName = "Ada Lovelace",
+                DateOfBirth = new DateOnly(1875, 7, 1),
+                Email = "bestAtWhatIDo@claws.com",
+                FullName = "Wolverine",
                 GitHubUrl = "https://github.com/Octocat",
                 ImageUrl = "https://via.placeholder.com/150",
                 PhoneNumber = "(253) 555-1234",
                 UserProfileId = 10,
-                SkilledLanguages = new List<string> { "C#", "Java", "C++" }
+                SkilledLanguages = new List<string> { "Fighting" }
             };
         }
 
