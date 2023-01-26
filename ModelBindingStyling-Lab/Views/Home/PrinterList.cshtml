@@ -43,8 +43,10 @@
                 @Html.DisplayFor(modelItem => item.BuildVolume)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PrinterImage)
+                    <img @Html.DisplayFor(modelItem => item.PrinterImage) {alt="Generic placeholder image" class="img-fluid" style="width: 180px; border-radius: 10px;"} />
+
             </td>
+            
         </tr>
 }
     </tbody>

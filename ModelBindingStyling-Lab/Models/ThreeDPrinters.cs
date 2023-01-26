@@ -34,6 +34,6 @@ namespace ModelBindingStyling_Lab.Models
         /// Product image of the printer
         /// </summary>
         [Display(Name = "Printer Image")]
-        public string PrinterImage { get; set; } = "https://via.placeholder.com/300";
+        public string PrinterImage { get; set; }
     }
 }
